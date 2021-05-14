@@ -7,7 +7,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git gitfast last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search pyenv rbenv battery ssh-agent)
 
 # Prompt for battery ohmyzsh plugin
-# RPROMPT='$(battery_pct_prompt)🔋'
+RPROMPT='$(battery_pct_prompt)🔋'
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -20,13 +20,13 @@ unalias rm # No interactive rm by default (brought by plugins/common-aliases)
 
 # Load rbenv if installed (to manage your Ruby versions)
 export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
-type -a rbenv > /dev/null && eval "$(rbenv init -)" # && RPROMPT+='[💗 $(rbenv_prompt_info)]'
+type -a rbenv > /dev/null && eval "$(rbenv init -)" && RPROMPT+='[💗 $(rbenv_prompt_info)]'
 
 
 # Load pyenv (to manage your Python versions)
 export PATH="${HOME}/.pyenv/bin:${PATH}" # Needed for Linux/WSL
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1 # https://github.com/pyenv/pyenv-virtualenv/issues/135
-type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" # && RPROMPT+='[🐍 ($(pyenv_prompt_info))]'
+type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" && RPROMPT+='[🐍 ($(pyenv_prompt_info))]'
 
 # Load nvm (to manage your node versions)
 export NVM_DIR="$HOME/.nvm"
@@ -68,3 +68,4 @@ export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR="code $@ >/dev/null 2>&1 -a"
 export BROWSER='"/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"'
 sudo /etc/init.d/postgresql start
+fortune

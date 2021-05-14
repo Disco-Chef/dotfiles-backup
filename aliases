@@ -34,3 +34,6 @@ alias zshconfig="code ~/.zshrc"
 alias wslopen="explorer.exe ."
 alias randomroa="curl https://rulesofacquisitionrails.herokuapp.com/api/v1/rules/random"
 alias windowshere="wslpath -w $(pwd)"
+open(){
+        explorer.exe $1
+}
