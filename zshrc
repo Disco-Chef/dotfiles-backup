@@ -67,5 +67,6 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR="code $@ >/dev/null 2>&1 -a"
 export BROWSER='"/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"'
+export DISPLAY=172.26.128.1:0
 sudo /etc/init.d/postgresql start
-fortune
+fortune -e

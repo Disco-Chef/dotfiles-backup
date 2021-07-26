@@ -25,14 +25,14 @@ alias speedtestlogger="while :
                         done"
 facepalm(){
         if [ "$1" ] && [  "$2" ]; then
-                curl -X POST -H 'Content-Type: application/json' -d '{ "description": "'"$1"'", "author": "'"2"'" }' https://jar-luc.herokuapp.com/api/v1/palmies
+                curl -X POST -H 'Content-Type: application/json' -d '{ "description": "'"$1"'", "author": "'"$2"'" }' https://jar-luc.herokuapp.com/api/v1/palmies
         else
                 echo "One or both of author/description are empty 😅"
         fi
 }
-alias zshconfig="code ~/.zshrc"
 alias wslopen="explorer.exe ."
 alias randomroa="curl https://rulesofacquisitionrails.herokuapp.com/api/v1/rules/random"
+alias zshconfig="code ~/.zshrc"
 alias windowshere="wslpath -w $(pwd)"
 open(){
         explorer.exe $1
