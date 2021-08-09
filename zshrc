@@ -20,7 +20,7 @@ unalias rm # No interactive rm by default (brought by plugins/common-aliases)
 
 # Load rbenv if installed (to manage your Ruby versions)
 export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
-type -a rbenv > /dev/null && eval "$(rbenv init -)" && RPROMPT+='[💗 $(rbenv_prompt_info)]'
+type -a rbenv > /dev/null && eval "$(rbenv init -)" # && RPROMPT+='[💗 $(rbenv_prompt_info)]'
 
 
 # Load pyenv (to manage your Python versions)

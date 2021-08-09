@@ -33,6 +33,11 @@ facepalm(){
 alias wslopen="explorer.exe ."
 alias randomroa="curl https://rulesofacquisitionrails.herokuapp.com/api/v1/rules/random"
 alias zshconfig="code ~/.zshrc"
+find_with_line_number() {
+  word_to_find=$1
+  git grep -n "${word_to_find}"
+}
+
 alias windowshere="wslpath -w $(pwd)"
 open(){
         explorer.exe $1
