@@ -5,6 +5,8 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
+    "editor.guides.bracketPairs": true,
+    "editor.bracketPairColorization.enabled": true,
     "editor.rulers":
     [
         80,
@@ -62,7 +64,6 @@
         "**/tmp/**": true,
         "**/vendor/**": true
     },
-    "git.enabled": false,
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "[python]":

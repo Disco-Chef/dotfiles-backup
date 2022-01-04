@@ -6,22 +6,22 @@ alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/m
 alias serve='ruby -run -e httpd . -p 8000' # Or python -m SimpleHTTPServer :)
 
 alias livetree='while :
-                        do
-                        clear
-                        tree .
-                        sleep 0.75
+                  do
+                  clear
+                  tree .
+                  sleep 0.75
                 done'
 alias pinglogger="date >> ~/code/testing-area/ping_logs.txt
                     echo \"Running \$ ping www.google.com \$ and logging every 1 second\" >> ~/code/testing-area/ping_logs.txt
                     ping www.google.com >> ~/code/testing-area/ping_logs.txt"
 alias speedtestlogger="while :
                         do
-                        date >> ~/code/testing-area/speedtest_logs.txt
-                        echo '********************************' >> ~/code/testing-area/speedtest_logs.txt
-                        speedtest >> ~/code/testing-area/speedtest_logs.txt
-                        echo '' >> ~/code/testing-area/speedtest_logs.txt
-                        echo '==========================================================================================================================' >> ~/code/testing-area/speedtest_logs.txt
-                        echo '' >> ~/code/testing-area/speedtest_logs.txt
+                          date >> ~/code/testing-area/speedtest_logs.txt
+                          echo '********************************' >> ~/code/testing-area/speedtest_logs.txt
+                          speedtest >> ~/code/testing-area/speedtest_logs.txt
+                          echo '' >> ~/code/testing-area/speedtest_logs.txt
+                          echo '==========================================================================================================================' >> ~/code/testing-area/speedtest_logs.txt
+                          echo '' >> ~/code/testing-area/speedtest_logs.txt
                         done"
 facepalm(){
         if [ "$1" ] && [  "$2" ]; then
@@ -37,6 +37,12 @@ find_with_line_number() {
   word_to_find=$1
   git grep -n "${word_to_find}"
 }
+alias keepprojectsalive="while :
+                          do
+                            curl https://jar-luc.herokuapp.com/api/v1/palmies
+                            curl https://rulesofacquisitionrails.herokuapp.com/api/v1/rules
+                            sleep 14m
+                          done"
 
 alias windowshere="wslpath -w $(pwd)"
 open(){
